@@ -1,0 +1,74 @@
+.navigation {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0 0 .2rem .1rem rgba(0, 0, 0, .2);
+  height: 7.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 9.5rem;
+  justify-content: space-between;
+  z-index: 100;
+
+  @include respond(phone) {
+    padding: 0 1.5rem;
+    justify-content: center;
+  }
+
+  &__logo {
+    img {
+      width: 22rem;
+      height: 6rem;
+    }
+  }
+
+  &__menu {
+    align-self: stretch;
+    display: flex;
+    transition: all .5s ease;
+
+    @include respond(phone) {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      background-color: $color-white;
+      width: 100%;
+      flex-direction: column;
+      box-shadow: 0 0 .2rem .1rem rgba(0, 0, 0, .2);
+    }
+  }
+
+  &__menu.active {
+    @include respond(phone) {
+   
+      left: 0;
+     
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-grey-dark-2;
+    font-weight: 700;
+    padding: 0 1.5rem;
+    transition: all .5s ease;
+
+    @include respond(phone) {
+      padding: 1rem;
+    }
+
+    
+  }
+
+  &__link:hover {
+    background-color: $color-secondary-light;
+    color: $color-white;
+  }
+
+}

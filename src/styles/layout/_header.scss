@@ -1,0 +1,67 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-grey-dark-3;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9.5rem;
+  z-index: 100;
+
+  &__bar {
+    font-size: 1.8rem;
+    color: $color-white;
+    position: absolute;
+    right: 2.5rem;
+    cursor: pointer;
+    display: none;
+
+    @include respond(phone) {
+     display: block;
+    }
+  
+  }
+
+  @include respond(phone) {
+    padding: 0 1.5rem;
+    justify-content: center;
+  }
+
+  &__left {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__center {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__right {
+    align-self: stretch;
+    display: flex;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    color: $color-white;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    transition: all 0.5s;
+  }
+
+  &__icon:hover {
+    background-color: $color-white;
+    color: $color-grey-dark-3;
+  }
+}

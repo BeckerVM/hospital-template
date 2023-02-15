@@ -1,0 +1,85 @@
+.footer {
+  margin-top: 10rem;
+  background-color: $color-grey-dark-3;
+  padding-top: 8rem;
+
+  @include respond(phone) {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  &__top {
+    padding: 0 9.5rem;
+    padding-bottom: 4rem;
+    display: flex;
+
+    @include respond(phone) {
+      padding: 0 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  &__bottom {
+    padding: 2.5rem;
+    text-align: center;
+    border-top: .1rem solid $color-grey-dark;
+
+    @include respond(phone) {
+      padding: .5rem;
+    }
+
+    p {
+      color: $color-white;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__left, &__center, &__right {
+    flex: 1;
+
+    @include respond(phone) {
+      margin-top: 3.5rem;
+      width: 100%;
+      flex: auto;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    @include respond(phone) {
+      text-align: left;
+    }
+
+    a {
+      color: $color-white;
+      font-size: 1.4rem;
+      transition: all ease .5s;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__content a:hover {
+    color: $color-grey-dark-2;
+  }
+
+  &__content i {
+    width: 2.5rem;
+  }
+}
